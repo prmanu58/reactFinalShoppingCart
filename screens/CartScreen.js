@@ -40,15 +40,17 @@ const CartScreen = (props) => {
                 }
             />
 
-            <View style={styles.listItem}>
-                <Text>Discount</Text>
-                <Text>80 or more: 15%</Text>
-                <Text>100 or more: 20%</Text>
+            <View style={styles.discountBox}>
+                <Text style={styles.blackText}>Discount</Text>
+                <Text><Text style={styles.blackText}>$80</Text> or more: <Text style={styles.blackText}>15%</Text></Text>
+                <Text><Text style={styles.blackText}>$100</Text> or more: <Text style={styles.blackText}>20%</Text></Text>
             </View>
 
+            <View style={styles.totalBox}> 
+            <Text style={styles.buttonText}>FINAL TOTAL: {cartCtx.finalTotal}</Text>
+            <Text style={styles.buttonText}>Deducted: {cartCtx.deducted}</Text>
+            </View>
 
-            <Text>FINAL TOTAL: {cartCtx.finalTotal}</Text>
-            <Text>Deducted: {cartCtx.deducted}</Text>
         </View>
     )
 }
